@@ -4,59 +4,60 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './css/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-library.add(fab);
+import { faFacebook, faGithub, faInstagram, faLinkedin, faTelegram, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 let items = [{
                 id: "gh",
                 name: "GitHub",
-                url: "#",
-                icon: "github"
+                href: "#",
+                icon: faGithub
             },
             {
-                id: "wa",
-                name: "WhatsApp",
-                url: "#",
-                icon: "whatsapp"
+                id: "ln",
+                name: "LinkedIn",
+                href: "#",
+                icon: faLinkedin
+            },
+            {
+                id: "tg",
+                name: "Telegram",
+                href: "#",
+                icon: faTelegram
             },
             {
                 id: "fb",
                 name: "Facebook",
-                url: "#",
-                icon: "facebook"
+                href: "#",
+                icon: faFacebook
             },
             {
                 id: "ig",
                 name: "Instagram",
-                url: "#",
-                icon: "instagram"
+                href: "#",
+                icon: faInstagram
             },
             {
                 id: "tt",
                 name: "TikTok",
-                url: "#",
-                icon: "tiktok"
+                href: "#",
+                icon: faTiktok
             }];
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <App idActive="contact">
+        <App>
             <Fragment>
                 <h1>Contact Me</h1>
-                <div>
-                    <ul className="lg-flex">
-                        {items.map((item) => (
-                            <li 
-                                key={ item.id } 
-                                className="list-group-item lg-i-custom-1"
-                            >
-                                <a className="" href={ item.url }><FontAwesomeIcon icon={['fab', item.icon]} size="6x"/></a>
-                            </li>
-                        ))}
-                    </ul>
+                <div className="dv-flex">
+                    {items.map((item) => (
+                        <div 
+                            key={ item.id } 
+                            className="dv-flex-content"
+                        >
+                            <a className="" href={ item.href }><FontAwesomeIcon icon={ item.icon } size="6x"/></a>
+                        </div>
+                    ))}
                 </div>
             </Fragment>
         </App>

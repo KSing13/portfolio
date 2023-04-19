@@ -1,12 +1,60 @@
 #root {
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 }
 
-.btn-nav {
-  color: rgba(255, 255, 255, 0.87);
+/* Header */
+.header-custom {
+  display: flex;
+  justify-content: right;
+}
+
+/* Content */
+.content-custom {
+  min-height: 60vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.menu .item {
+  padding: 18px 28px;
+  cursor: pointer;
+  transition: color .3s ease-out;
+  text-decoration: none;
+  color: #111;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 5px 0;
+}
+.menu .item .active {
+  color: #fff;
+}
+
+.menu .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30px;
 }

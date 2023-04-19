@@ -6,6 +6,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <App idActive="home">Main</App>
+        <App>Main</App>
     </React.StrictMode>,
 )
