@@ -1,20 +1,22 @@
-import { ReactNode, useState } from 'react';
 import './css/App.css';
-import Menu from './modules/Menu';
+import Box from './components/Box';
+import About from './modules/About';
+import Contact from './modules/Contact';
+import Skill from './modules/Skill';
 
-interface Props {
-    children: ReactNode;
-}
+const App = () => {
+    let titleAbout = "So, who am I?";
+    let titleSkill = "Skills";
+    let titleContact = "Contact";
+    let contentAbout = <About />;
+    let contenSkill = <Skill />;
+    let contentContact = <Contact />;
 
-const App = ( {children} : Props) => {
     return (
-        <div>
-            <div className='header-custom'>
-                <Menu/>
-            </div>
-            <div className='content-custom'>
-                { children }
-            </div>
+        <div className='app'>
+            <Box heading={ titleAbout } content={ contentAbout }/>
+            <Box heading={ titleSkill } content={ contenSkill }/>
+            <Box heading={ titleContact } content={ contentContact }/>
         </div>
     )
 }

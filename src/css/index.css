@@ -7,18 +7,19 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom right, purple, blue);
+  background-image: linear-gradient(to right top, #620275, #810073, #9c006f, #b40c6a, #c92464, #d8385e, #e54c58, #ef6052, #f7774c, #fd8e49, #ffa549, #ffbc4d);
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 
 h1 {
@@ -28,30 +29,4 @@ h1 {
 
 button {
   cursor: pointer;
-}
-
-.dv-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 2em;
-}
-.dv-flex .dv-flex-content {
-  padding: 2em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.dv-flex .dv-flex-content:hover {
-  filter: drop-shadow(0 0 2em #000000);
-}
-.dv-flex .dv-flex-content.react:hover {
-  filter: drop-shadow(0 0 2em #000000);
-}
-.dv-flex .dv-flex-content a {
-  font-weight: 500;
-  color: #ffffffde;
-  text-decoration: inherit;
-}
-.dv-flex .dv-flex-content a:hover {
-  color: #ffffffde;
 }

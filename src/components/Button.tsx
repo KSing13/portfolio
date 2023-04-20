@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 interface Props {
     children?: ReactNode; //? = optional
     onClick: () => void;
-    colour?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | 'link' | 'menu';
+    colour?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | 'link' | 'custom';
 }
 
 const Button = ( {children, onClick, colour='primary'} : Props) => {
