@@ -65,7 +65,7 @@ const items: any[]  = [{
                         {
                             title: "Data Science Foundations",
                             colour: "code1",
-                            icon: ''
+                            icon: faFaceSmile
                         }];
 
 const Skill = () => {
