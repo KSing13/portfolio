@@ -7,10 +7,11 @@
 }
 
 .box {
-  margin: 2rem 0;
-  aspect-ratio: 16/9;
+  margin-top: 2rem;
+  aspect-ratio: auto 16/9;
 }
 
+/* Content Div */
 .dv-flex {
   display: flex;
   flex-wrap: wrap;
@@ -20,13 +21,15 @@
   gap: 2rem;
 }
 .dv-flex .dv-flex-content {
-  max-width: 50vw;
   will-change: filter;
   transition: filter 300ms;
 }
 .dv-flex .dv-flex-content img {
   filter: drop-shadow(0 0 2em #000000);
   border-radius: 50%;
+}
+.dv-flex .dv-flex-content .dv-right {
+  max-width: 50vw;
 }
 .dv-flex .dv-flex-content a {
   font-weight: 500;
@@ -42,4 +45,139 @@
 
 .btn-custom {
   color: #620275;
+}
+
+/* List Group (Skill) */
+.list-skill-custom {
+  color: #000000;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  counter-reset: cardnr;
+  justify-content: center;
+}
+.list-skill-custom li {
+  --frontColor: white;
+  --width: 10em;
+  --inlineP: 0.5rem;
+  --borderR: 4rem;
+  --arrowW: 2rem;
+  --arrowH: 1.5rem;
+
+  counter-increment: cardnr;
+  width: calc(var(--width) - var(--inlineP) * 2);
+  display: grid;
+  grid-template:
+    "icon" var(--borderR)
+    "title";
+  margin-inline: var(--inlineP);
+  margin-bottom: calc(var(--borderR));
+  position: relative;
+}
+.list-skill-custom li .icon,
+.list-skill-custom li .title {
+  background: var(--frontColor);
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+}
+.list-skill-custom li .icon,
+.list-skill-custom li .title {
+  color: var(--accent-color);
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.list-skill-custom li .title {
+  filter: drop-shadow(0.125rem 0.125rem 0.075rem rgba(0, 0, 0, 0.25));
+}
+.list-skill-custom li .icon {
+  grid-area: icon;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--borderR) 0 0 0;
+  position: relative;
+}
+.list-skill-custom li .title {
+  grid-area: title;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.list-skill-custom li::after {
+  content: counter(cardnr, decimal-leading-zero);
+  position: absolute;
+  z-index: -1;
+
+  left: calc(var(--inlineP) * -1);
+  right: calc(var(--inlineP) * -1);
+  top: var(--borderR);
+  bottom: calc(var(--borderR) * -1);
+
+  display: flex;
+  align-items: flex-end;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.25),
+    transparent 25% 75%,
+    rgba(0, 0, 0, 0.25)
+  );
+  border-radius: 0 0 var(--borderR) 0;
+
+  --pad: 1rem;
+  padding: var(--pad);
+  font-size: calc(var(--borderR) - var(--pad) * 2);
+  color: white;
+}
+.list-skill-custom li::before {
+  content: "";
+  position: absolute;
+  height: var(--borderR);
+  top: calc(100% + var(--borderR) - 2px);
+  left: calc(var(--inlineP) * -1);
+  right: calc(var(--inlineP) * -1);
+  border-radius: 0 var(--borderR) 0 0;
+
+  background-image: linear-gradient(var(--accent-color), transparent 60%);
+  opacity: 0.5;
+  filter: blur(2px);
+}
+/* 12 Colours matching with background */
+.list-skill-code1 {
+  --accent-color:#620275;
+}
+.list-skill-code2 {
+  --accent-color:#810073;
+}
+.list-skill-code3 {
+  --accent-color:#9c006f;
+}
+.list-skill-code4 {
+  --accent-color:#b40c6a;
+}
+.list-skill-code5 {
+  --accent-color:#c92464;
+}
+.list-skill-code6 {
+  --accent-color:#d8385e;
+}
+.list-skill-code7 {
+  --accent-color:#e54c58;
+}
+.list-skill-code8 {
+  --accent-color:#ef6052;
+}
+.list-skill-code9 {
+  --accent-color:#f7774c;
+}
+.list-skill-code10 {
+  --accent-color:#fd8e49;
+}
+.list-skill-code11 {
+  --accent-color:#ffa549;
+}
+.list-skill-code12 {
+  --accent-color:#ffbc4d;
 }

@@ -1,24 +1,24 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
-const items = [{
-                id: "gh",
-                name: "GitHub",
-                href: "https://github.com/KSing13",
-                icon: faGithub
-            },
-            {
-                id: "ln",
-                name: "LinkedIn",
-                href: "https://www.linkedin.com/in/kay-sing-liew/",
-                icon: faLinkedin
-            },
-            {
-                id: "tt",
-                name: "TikTok",
-                href: "../src/images/ks_tt.jpg",
-                icon: faTiktok
-            }];
+const items: any[] = [{
+                        id: "gh",
+                        name: "GitHub",
+                        href: "https://github.com/KSing13",
+                        icon: faGithub
+                    },
+                    {
+                        id: "ln",
+                        name: "LinkedIn",
+                        href: "https://www.linkedin.com/in/kay-sing-liew/",
+                        icon: faLinkedin
+                    },
+                    {
+                        id: "tt",
+                        name: "TikTok",
+                        href: "../src/images/ks_tt.jpg",
+                        icon: faTiktok
+                    }];
 
 const Contact = () => {
     return (
