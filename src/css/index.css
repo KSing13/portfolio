@@ -16,8 +16,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: -webkit-linear-gradient(to right top, #620275, #810073, #9c006f, #b40c6a, #c92464, #d8385e, #e54c58, #ef6052, #f7774c, #fd8e49, #ffa549, #ffbc4d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right top, #620275, #810073, #9c006f, #b40c6a, #c92464, #d8385e, #e54c58, #ef6052, #f7774c, #fd8e49, #ffa549, #ffbc4d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right top, #0d0008, #20051a, #2d062b, #39033e, #430055, #442177, #393c99, #0056bb, #0083dc, #00aeec, #00d5f1, #5ffbf1); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right top, #0d0008, #20051a, #2d062b, #39033e, #430055, #442177, #393c99, #0056bb, #0083dc, #00aeec, #00d5f1, #5ffbf1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body::-webkit-scrollbar {
   width: .5rem;
